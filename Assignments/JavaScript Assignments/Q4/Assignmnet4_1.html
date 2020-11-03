@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Of Students</title>
+        <script>
+            var Students=new Array();
+
+            //to add Student names in Students Array
+            function add()
+            {
+                
+                var name=document.getElementById('nameId').value;
+                console.log(Students.length);
+                
+                if(Students.length < 4)
+                {
+                    Students.push(name)
+                    console.log(Students);
+                }
+                else
+                {
+                    alert("Maximum 4 Students can be added");
+                }
+            }
+
+            //to Display Names of Students on Screen
+            function display()
+            {
+                document.write("<h2>List of Students</h2><br><p>-----------</p><br>");
+
+                for(var i=0;i<Students.length;i++)
+                {
+                    document.write("<br>" + Students[i]);
+                }
+            }
+
+
+        </script>
+    </head>
+
+    <body>
+        
+        <div>
+            <input type="text" name="name" id="nameId">
+            <button id="addbtn" onclick="add()">Add</button>
+            <button id="displaybtn" onclick="display()">Display</button>
+        </div>
+
+<!-- 
+        <h2>List of Students</h2>
+        <br>
+        <p>------------------</p>
+
+        <div id="resultDiv">
+
+        </div> -->
+
+
+    </body>
+</html>

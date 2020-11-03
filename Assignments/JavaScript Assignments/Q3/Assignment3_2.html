@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String Manipulation</title>
+    </head>
+
+    <body>
+        <script>
+            var mainStr="Cybage Software Pvt Ltd";
+            var chr=window.prompt("Enter the Character to search");
+            var text="";
+            
+            function chechCharacter()
+            {
+                    for(var i=0;i<mainStr.length;i++)
+                {
+                    if(mainStr.charAt(i)==chr.charAt(0))
+                    {
+                        text="Character " + chr + " is found at position " + (i+1);
+                        break;
+                    }
+                    else
+                    {
+                        text="Character " +chr+" not present";
+                    }
+                }
+                
+                document.write(text);
+
+            }
+            function extract()
+            {
+                var ext=mainStr.split(' ').splice(0,2);
+                document.write('<br>');
+                document.write(mainStr + " is popularly known as " + ext);
+            }
+
+            function lowercase()
+            {
+                var lower=mainStr.toLowerCase();
+                document.write('<br>');
+                document.write(lower);
+            }
+            
+            function uppercase()
+            {
+                var uppercase=mainStr.toUpperCase();
+                document.write('<br>');
+                document.write(uppercase);
+            }
+            
+            
+            chechCharacter();
+            extract();
+            lowercase();
+            uppercase();
+            
+        </script>
+
+    </body>
+</html>

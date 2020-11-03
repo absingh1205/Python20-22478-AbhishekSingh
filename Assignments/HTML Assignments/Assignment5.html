@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>
+            Smiley Canvas
+        </title>
+        <style>
+            canvas{
+                height: 200px;
+                width: 400px;
+                
+            }
+        </style>
+    </head>
+    <body onload="face()">
+        <canvas id="canvas"></canvas>
+        
+        
+        <script>
+
+            function face()
+            {
+                
+                var element=document.getElementById('canvas');
+                var ctx=element.getContext('2d');
+
+                ctx.beginPath();
+                ctx.fillStyle='Yellow';
+                ctx.arc(75,75,50,0,Math.PI*2,true); 
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.moveTo(55,50);
+
+                ctx.beginPath();
+                ctx.fillStyle="Black";
+                ctx.arc(60,60,5,0,Math.PI*2,true);
+                ctx.closePath();
+                ctx.fill();
+
+                ctx.moveTo(70,50);
+
+                ctx.fillStyle="Black";
+                ctx.arc(90,60,5,0,Math.PI*2,true);
+                ctx.closePath();
+                ctx.fill();
+
+
+                ctx.moveTo(105,90);
+
+                ctx.beginPath();
+                ctx.strokeStyle="Black";
+                ctx.arc(75,80,15,0,Math.PI,false);
+
+                ctx.stroke();
+
+
+
+                
+
+
+            }
+
+
+        </script>
+    </body>
+</html>

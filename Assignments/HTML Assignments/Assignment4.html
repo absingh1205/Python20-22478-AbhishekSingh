@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Worker</title>
+
+</head>
+<body>
+    <p>
+        Output Numbers:  <output id="output"></output>
+    </p>
+
+    <button onclick="startWorker()">Start</button>
+    <button onclick="stopWorker()">Stop</button>
+
+    <script>
+        var cnt;
+
+        function startWorker()
+        {
+            console.log("Inside");
+            if(typeof(Worker) !=="undefined") {
+                if(typeof(cnt) == "undefined" ) {
+                    cnt = new Worker("Assign4.js");
+                }
+
+                cnt.onmessage =  function(event) {
+                    document.getElementById("output").innerHTML= event.data;
+                };
+            } else {
+                document.getElementById("output").innerHTML= "Not Supported";
+            }
+        }
+
+        function stopWorker() {
+            cnt.terminate();
+            cnt = undefined;
+            
+        }
+    </script>
+
+</body>
+
+</html>

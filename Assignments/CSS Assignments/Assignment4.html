@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <style>
+        /* my added bits */
+	html, body {
+		margin: 0;
+		padding: 0.25em;
+		background: #fff;
+	}
+	
+	form {
+		border: 1px solid #999;
+		padding: 0.25em;
+		background: #EEE;
+        width: 400px;
+
+	}
+	
+	div {
+		padding-bottom: 0.25em;
+	}
+	
+	/* essential */
+	label {
+		float: left;
+		width: 10em;
+		text-align: right;
+		padding-right: 0.5em;
+        border: 1px solid;
+	}
+	
+	input,textarea {
+		text-align: left;
+		width: 10em;
+	}
+	section{
+        text-align: left;
+		width: 25em;
+        
+    }
+	input.submit {
+		margin-left: 6.5em;
+		width: auto;
+	}
+	
+	/* additionally give the button and the labels
+	the same font to align the button better */
+	
+	label, input.submit {
+		font: normal 0.8em Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}
+    </style>
+</head>
+<body>
+    <form action="success.html">
+    <h1>Registeration Form</h1>
+
+    <div><label>Employee ID:</label><input type="Number" min="10001" max="15000" autofocus required ></div>
+    <div><label>First Name:</label><input type="text" pattern="[A-Za-z]{3,15}" title="only characters minimum 3 and maximum 15" placeholder="Enter First Name"></div>
+    <div><label>Last Name:</label><input type="text" pattern="[A-Za-z]{5,25}" title="only characters minimum 5 and maximum 25" placeholder="Enter Last Name"></div>
+    <div><label>Department:</label>
+        <section>
+            <br>
+            <div><input type="radio" name="IT" id="IT">IT</div>
+            <div><input type="radio" name="HR" id="HR">HR</div>
+            <div><input type="radio" name="FINANCE" id="FINANCE">FINANCE</div>
+            <div><input type="radio" name="ADMIN" id="ADMIN">ADMIN</div>
+    </section>
+</div>
+    <div><label>Date of Joining:</label><input type="date" max="12-10-2020"></div>
+    <div><label>Email Address:</label><input type="email" ></div>
+    <div><label>Contact Number:</label><input type="text" pattern="[789][0-9]{9}"></div>
+    <div><label>Address</label> <textarea rows="10" cols="23" ></textarea></div>
+    <div><label>Training Programs to be attended:</label>
+        <br>
+       <div><input type="checkbox">Web Basic<br></div> 
+       <div><input type="checkbox">C# <br></div> 
+       <div><input type="checkbox">Web Basic<br></div> 
+       <div><input type="checkbox">Entity Framework<br></div> 
+        <div><input type="checkbox">ASP DOTNET MVC<br></div>
+    
+    
+   
+
+    <div><input type="submit"  value="Register">
+        <input type="submit" value="Cancel"></div>
+
+</form>
+</body>
+</html> 

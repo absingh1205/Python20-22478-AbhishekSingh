@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        
+    </head>
+
+    <body>
+        <div id="headingId"><h2>Basic Calculator</h2></div>
+
+        <div>
+            <input type="text" name="input" id="inputId" value="" readonly>
+            <button id="calculateId" onclick="calculate()">Calculate</button>
+            <button id="toggleId" onclick="toggle()">Scientific</button>
+        </div>
+
+        <table style="border: 1px solid black;height: 150px; width: 150px;">
+            <tr>
+                <td>
+                    <button id="onebtn" onclick="add1()">1</button>
+                </td>
+                
+                <td>
+                    <button id="twobtn" onclick="add2()">2</button>
+                </td>
+                
+                <td>
+                    <button id="threebtn" onclick="add3()">3</button>
+                </td>
+                <td>
+                    <button id="plusbtn" onclick="addplus()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="fourbtn" onclick="add4()">4</button>
+                </td>
+                
+                <td>
+                    <button id="fivebtn" onclick="add5()">5</button>
+                </td>
+                
+                <td>
+                    <button id="sixbtn" onclick="add6()">6</button>
+                </td>
+                <td>
+                    <button id="minusbtn" onclick="addminus()">-</button>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <button id="sevenbtn" onclick="add7()">7</button>
+                </td>
+                
+                <td>
+                    <button id="eightbtn" onclick="add8()">8</button>
+                </td>
+                
+                <td>
+                    <button id="ninebtn" onclick="add9()">9</button>
+                </td>
+                <td>
+                    <button id="multiplybtn" onclick="addmultiply()">*</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button id="zerobtn" onclick="add0()">0</button></td>
+                <td></td>
+                <td><button id="divbtn" onclick="adddiv()">/</button></td>
+            </tr>
+            
+        </table>
+        <script src="./OOJS2.js"></script>
+    </body>
+</html>

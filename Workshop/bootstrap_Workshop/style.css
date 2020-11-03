@@ -1,0 +1,24 @@
+body{
+    background-image:url(blue_light_line_65813_1920x1080.jpg);
+    
+}
+
+.form-container{
+    opacity: 1.0;
+    height:700px;
+    width:700px;
+    /* border:1px solid black; */
+    margin: auto;
+}
+
+.btn btn-primary btn-lg{
+    padding-left: 50px;
+    width:100%;
+}
+
+@media all and (max-width:900px){
+    .form-container{
+        height: 100%;
+        width:80%;
+    }
+}

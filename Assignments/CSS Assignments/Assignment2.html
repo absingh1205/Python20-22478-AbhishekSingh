@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>abc</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+  /* background-color: lemonchiffon; */
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  display: inline-flexbox;
+  float: left;
+  width: 40%;
+  padding: 5px;
+  overflow: auto;
+}
+.row{
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+.row column{
+    font-size: 16px;
+        display: inline-block;
+       
+        padding: 5px 20px;
+}
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+  font-size: medium;
+}
+.menu a {
+  background-color:cornflowerblue;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  color:black;
+}
+.main {
+  float:left;
+  width:60%;
+  padding:0 20px;
+}
+.right {
+  background-color:cornflowerblue;
+  float:left;
+  width:20%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+.car-names{
+  float:initial;
+  width:20%;
+  text-align:center;
+  font-size: medium;
+  border-radius: 3px dashed ;
+}
+.logo{
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: cornflowerblue;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:cornflowerblue;
+  color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width:100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:cornflowerblue;padding:15px;text-align:center;">
+  <div class="logo">
+    <figure class="figure">
+        <img src="./download.png" alt="Trulli" style="width:100%;position: absolute;">
+        <figcaption> </figcaption>
+  </figure>
+ </div>  
+  <h1>Welcome to the <strong>Hyundai World</strong></h1>
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <input type="text" placeholder="Search..">
+  </div>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="#">Our New Range</a>
+    <a href="#">CUSTOMER CARE </a>
+    <a href="#">ABOUT US</a>
+    <a href="#"> SUPPORT US</a>
+  </div>
+
+  <div class="main">
+
+
+<div class="row">
+    <div class="column">
+      <img src="download (1).jpg" alt="Nature" >
+    </div>
+    <div class="column">
+      <img src="./download (2).jpg" alt="Snow" >
+    </div>
+    <div class="column">
+      <img src="./download (3).jpg" alt="Mountains" >
+    </div>
+    <div class="column">
+      <img src="./download (4).jpg" alt="Lights" >
+    </div>
+  </div>
+  
+  <!-- The expanding image container -->
+  <div class="container">
+    <!-- Close the image -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  
+    <!-- Expanded image -->
+    <img id="expandedImg" style="width:100%">
+  
+    <!-- Image text -->
+    <div id="imgtext"></div>
+  </div>
+    <!-- ?isdas -->
+    <div>
+        
+            <img src="./download.png" alt="Mountains" style="width:100%">
+          
+    </div>
+  </div>
+
+  <div class="right">
+    <h2>Our New Models</h2>
+    <div class="menu">
+        <div class="car-names"><a href="#">HYUNDAI ACCENT</a></div>
+        <div class="car-names"><a href="#">HYUNDAI VENUE</a></div>
+        <div class="car-names"><a href="#">HYUNDAI CRETA</a></div>
+        <div class="car-names"><a href="#">HYUNDAI ELANTRA</a></div>
+        <div class="car-names"><a href="#">HYUNDAI CITY</a></div>
+      
+    </div>
+    
+  </div>
+</div>
+
+
+<footer style="background-color:cornflowerblue;text-align:center;padding:10px;margin-top:7px;">© copyright Hyundai Pvt Ltd.</footer>
+</body>
+</html>

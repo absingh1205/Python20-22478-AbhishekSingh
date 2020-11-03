@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+            function allowdrop(eve){
+                eve.preventDefault();
+            }
+
+            function drag(eve){
+                eve.dataTransfer.setData("text",eve.target.id);
+            }
+
+            function drop(eve){
+                eve.preventDefault();
+                var data = eve.dataTransfer.getData("text");
+                eve.target.appendChild(document.getElementById(data));
+            }
+        </script>
+
+    </head>
+
+    <body>
+        <div id="dropId" ondrop="drop(event)" ondragover="allowdrop(event)" style="height: 300px; width: 400px;border: 2px solid black;"></div>
+
+        <img src="./car.jpg" id="carId" draggable="true" ondragstart="drag(event)" alt="Car" style="height: 300px;width: 400px;" >
+    </body>
+</html>

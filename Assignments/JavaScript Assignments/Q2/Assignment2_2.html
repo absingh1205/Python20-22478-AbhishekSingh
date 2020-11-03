@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compound Interest</title>
+
+        <script>
+            var principal=Number(window.prompt("Enter Principal"));
+            var rate=Number(window.prompt("Enter Rate of Interest"));
+            var time=Number(window.prompt("Enter Period in Years"));
+
+
+            var ci=(principal * Math.pow((1+(rate/100)),time))-principal;
+
+            alert("Your Compound Interest will be " + ci);
+
+        </script>
+    </head>
+
+    <body>
+        <div>
+
+        </div>
+
+    </body>
+</html>

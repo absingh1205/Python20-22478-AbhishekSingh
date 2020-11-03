@@ -1,0 +1,26 @@
+fieldset{
+
+    width: 50%;
+    margin-left: 300px;
+  }
+  
+  label{
+  
+    display: inline;
+  }
+  
+  input{
+  
+    border: 1px solid #000;
+    
+    float: right;
+   
+  }
+  #button{
+  
+    height: 20px;
+    width: 100px;
+    margin-top: 40px;
+    margin-left: 250px;
+  
+  }
